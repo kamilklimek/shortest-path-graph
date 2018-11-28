@@ -1,6 +1,6 @@
 import sys
 
-INF = sys.maxint
+INF = sys.maxsize
 
 class bcolors:
     HEADER = '\033[95m'

@@ -3,8 +3,8 @@ import os
 
 directory_path = 'tests/'
 file_handler_meta_test_data = open('test_meta_data', 'a')
-amount_nodes = 10
-for i in range(10):
+amount_nodes = 10240
+for i in range(1):
     for j in range(10):
         graph = generate_graph(amount_nodes, 0)
         test_name = "test_" + str(i) + "_" + str(j) + "_" + str(amount_nodes)
@@ -14,8 +14,9 @@ for i in range(10):
         for x in range(len(graph)):
             for y in range(amount_nodes):
                 file_handler.write(str(graph[x][y]) + " ")
-            file_handler.write("\n");
+            file_handler.write("\n")
         file_handler.close()
+    print("Already generated epoche of: " + str(amount_nodes))
     amount_nodes = int (amount_nodes * 2)
 
 file_handler_meta_test_data.close()

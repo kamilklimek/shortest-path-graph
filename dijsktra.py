@@ -44,9 +44,9 @@ class Dijkstra:
                 if node_not_visited and is_not_the_same_node and distance_is_not_infinite and is_the_shortest_way:
                     distances[inner_index] = distances[min_distance_vertex_index] + self.graph[min_distance_vertex_index][inner_index]
 
-            #if distances[destination_index] != INFINITE:
-            #    return (distances[destination_index], counter)
+            if distances[destination_index] != INFINITE:
+                return (distances[destination_index], counter)
         
-        return (distances, counter)
+        return (distances[destination_index], counter)
 
     
